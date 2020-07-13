@@ -17,6 +17,17 @@
     <%= form.text_area :body %>
   </div>
 
+  <%= form.fields_for :technologies do |technology_form| %>
+  <div class="field">
+    <ul>
+      <li>
+        <%= technology_form.label 'Technology name' %>
+        <%= technology_form.text_field :name %>
+      </li>
+    </ul>
+  </div>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
